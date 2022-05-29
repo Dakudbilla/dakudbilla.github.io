@@ -32,11 +32,13 @@ const skillsHeader = document.querySelectorAll(".skills__header");
 
 function toggleSkills() {
   let itemClass = this.parentNode.className;
-
+  
+// close all other open skills when a closed one is clicked
   for (let i = 0; i < skillsContent.length; i++) {
     skillsContent[i].className = "skills__content skills__close";
   }
 
+//if skill is already closed. Open it when its clicked
   if (itemClass === "skills__content skills__close") {
     this.parentNode.className = "skills__content skills__open";
   }
