@@ -32,13 +32,13 @@ const skillsHeader = document.querySelectorAll(".skills__header");
 
 function toggleSkills() {
   let itemClass = this.parentNode.className;
-  
-// close all other open skills when a closed one is clicked
+
+  // close all other open skills when a closed one is clicked
   for (let i = 0; i < skillsContent.length; i++) {
     skillsContent[i].className = "skills__content skills__close";
   }
 
-//if skill is already closed. Open it when its clicked
+  //if skill is already closed. Open it when its clicked
   if (itemClass === "skills__content skills__close") {
     this.parentNode.className = "skills__content skills__open";
   }
@@ -48,7 +48,27 @@ skillsHeader.forEach((el) => {
   el.addEventListener("click", toggleSkills);
 });
 /*==================== QUALIFICATION TABS ====================*/
+const tabs = document.querySelectorAll("[data-target]");
+const tabContents = document.querySelectorAll("[data-content]");
 
+tabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    const target = document.querySelector(tab.dataset.target);
+    tabContents.forEach((tabContent) => {
+      tabContent.classList.remove("qualification__active");
+    });
+
+    target.classList.add("qualification__active");
+
+    //change color of inactive qualification header
+    tabs.forEach((tab) => {
+      tab.classList.remove("qualification__active");
+    });
+
+    //activate the active qualification header
+    tab.classList.add("qualification__active");
+  });
+});
 /*==================== SERVICES MODAL ====================*/
 
 /*==================== PORTFOLIO SWIPER  ====================*/
