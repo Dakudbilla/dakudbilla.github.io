@@ -70,6 +70,30 @@ tabs.forEach((tab) => {
   });
 });
 /*==================== SERVICES MODAL ====================*/
+const modalViews = document.querySelectorAll(".services__modal");
+const modalButtons = document.querySelectorAll(".services__button");
+const modalCloses = document.querySelectorAll(".services__modal-close");
+
+//Append active-modal to make modal visible
+let modal = function (modalClick) {
+  modalViews[modalClick].classList.add("active-modal");
+};
+
+//Get the speficic service to open as modal
+modalButtons.forEach((modalButton, i) => {
+  modalButton.addEventListener("click", () => {
+    modal(i);
+  });
+});
+
+//Get modal which is to be closed and remove active-modal class to make it invisible
+modalCloses.forEach((modalClose) => {
+  modalClose.addEventListener("click", () => {
+    modalViews.forEach((modalView) => {
+      modalView.classList.remove("active-modal");
+    });
+  });
+});
 
 /*==================== PORTFOLIO SWIPER  ====================*/
 
