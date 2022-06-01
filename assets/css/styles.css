@@ -169,9 +169,6 @@ img {
 .nav__toggle {
   font-weight: var(--font-medium);
 }
-.nav__logo {
-  font-size: var(--h3-font-size);
-}
 
 .nav__logo:hover {
   color: var(--first-color);
@@ -210,7 +207,7 @@ img {
   flex-direction: column;
   align-items: center;
   font-size: var(--small-font-size);
-  font-weight: var(var(--font-medium));
+  font-weight: var(--font-medium);
 }
 
 .nav__link:hover {
@@ -223,8 +220,8 @@ img {
 
 .nav__close {
   position: absolute;
-  right: 1.3rem;
-  bottom: 0, 5rem;
+  right: 1.5rem;
+  bottom: 0, 9rem;
   cursor: pointer;
   color: var(--first-color);
 }
@@ -241,6 +238,9 @@ img {
   color: var(--first-color);
 }
 /* Change background header */
+.scroll-header {
+  box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+}
 
 /*==================== HOME ====================*/
 .home__container {
@@ -944,9 +944,30 @@ a.portfolio__button {
   color: rgb(225, 239, 251);
 }
 /*========== SCROLL UP ==========*/
+.scrollup {
+  position: fixed;
+  right: 1rem;
+  bottom: 5rem;
+  background-color: var(--first-color);
+  opacity: 0.8;
+  padding: 0 0.3rem;
+  border-radius: 0.4rem;
+  z-index: var(--z-tooltip);
+  transition: 0.4s;
+}
 
+.scrollup:hover {
+  background-color: var(--first-color-alt);
+}
+
+.scrollup__icon {
+  font-size: 1.5rem;
+  color: #fff;
+}
 /* Show scroll */
-
+.show-scroll {
+  bottom: 5rem;
+}
 /*========== SCROLL BAR ==========*/
 
 /*==================== MEDIA QUERIES ====================*/
