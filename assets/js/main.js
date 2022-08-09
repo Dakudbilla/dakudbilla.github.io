@@ -205,3 +205,17 @@ themeButton.addEventListener("click", () => {
   localStorage.setItem("selected-theme", getCurrentTheme());
   localStorage.setItem("selected-icon", getCurrentIcon());
 });
+
+//Alert to ask user to go mobile
+
+const goMobile = () => {
+  if (screen.width > 768) {
+    setTimeout(() => {
+      alert(
+        "Want to see more ?\nTry viewing this site on mobile, you will love it"
+      );
+    }, 5000);
+  }
+};
+
+goMobile();
