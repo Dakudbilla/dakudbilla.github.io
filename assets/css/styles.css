@@ -1272,7 +1272,7 @@ a.portfolio__button {
   }
 
   .services__container {
-    grid-template-columns: repeat(3, 218px);
+    grid-template-columns: repeat(2, auto);
   }
 
   .services__icon {
@@ -1357,7 +1357,7 @@ a.portfolio__button {
   }
 
   .services__container {
-    grid-template-columns: repeat(3, 238px);
+    grid-template-columns: repeat(2, auto);
   }
 
   .portfolio__content {
