@@ -214,7 +214,7 @@ const goMobile = () => {
       alert(
         "Want to see more ?\nTry viewing this site on mobile, you will love it"
       );
-    }, 5000);
+    }, 20000);
   }
 };
 
